@@ -1,0 +1,11 @@
+This code uses a XOR cipher. For us to exploit this code we need the key to the XOR cipher. Although, the XOR operator is vulnerable to a "known-plaintext-attack", since a plaintext and a ciphertext are present. And then "plaintext XOR ciphertext = key".
+
+Being that: 
+    Plain text -> array("showpassword"=>"no", "bgcolor"=>"#ffffff")
+    Cipher text -> is the cookie itself, you can grab it with burpsuite
+    
+By using the plain text as key and passing in the base64 decoded cookie we can get the key.
+
+Now using the key given in the key field and passing in the base64 decoded cookie we will get the plain text.
+
+Now we can pass in the array we want to encrypt (with the showpassword => yes) and we will get the cookie needed to get the password for the next level!
