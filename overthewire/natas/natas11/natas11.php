@@ -21,7 +21,7 @@ function xor_encrypt($in) {
 echo base64_encode(xor_encrypt(json_encode(array("showpassword"=>"yes","bgcolor"=>"#ffffff"))));
 
 
-//the key is EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3 is the key
+//the key is EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3
 
 ?>
 
