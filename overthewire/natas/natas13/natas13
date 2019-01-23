@@ -6,6 +6,8 @@ So we need to think what can we do to bypass this check...
 
 Well, we can create a normal php file and add the jpeg magic bytes at the beggining, lets try it!
 
+JPEG magic bytes -> FF D8 FF EE
+
 To do that we'll do the following with python:
 
 Python 2.7.15+ (default, Aug 31 2018, 11:56:52) 
