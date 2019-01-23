@@ -1,0 +1,13 @@
+In this challenge we need to upload a picture with the max size of 1KB.
+ 
+It then creates a random path for that picture using the extension we gave it and creating a random name for it.
+
+Although the code given doesn't actually check if we are giving a picture or not...
+
+So what if we try to give it a php file that shows us the key to the next level (check php file).
+
+Although a .jpg is given to us. That happens because the page code sets the name of the file to (randomName).jpg
+
+But by using burp we can change the extension and get our .php file in the end! :) 
+
+The password given is -> jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
