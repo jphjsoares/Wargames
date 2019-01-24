@@ -1,0 +1,16 @@
+In this challenge we have an input field that looks for a username and returns if it exists or not.
+So if we look at the code given we can see that the code communicates with a database, although no output from the DB is given, only if it exists or not.
+This is basically the same as saying "true" or "false".
+
+We could try to exploit this with blind sql injection in order to get the password!
+
+For that I created a script that looks for the characters that the password contains and then it bruteforces the password using those chars. (Check the python file)
+
+The query looks like this:
+
+"SELECT * WHERE username = 'natas16'" AND PASSWORD LIKE BINARY "%x%"
+
+Being that %x% is any char given.
+
+Just run the script and it's done!
+
