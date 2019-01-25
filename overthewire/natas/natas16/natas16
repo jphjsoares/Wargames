@@ -1,0 +1,16 @@
+For this challenge we have command injection again, although this time there's even more filtering. 
+Although they do not filter all chars, we can actually execute commands using command substitution [$()]
+
+Read more -> https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html
+
+Okay so we already know how to execute commands, so, how can we make this work?
+
+So lets try to do the following $(grep 1 /etc/natas_webpass/natas17)
+
+All the words from the dictionary were returned, so that means that 1 does not exist in the natas17 password file. So we will have to do something similar to what we have done on natas16
+A "boolean based injection", we'll try each character against the file we want and if it returns dictionary words, it means it does not exist.
+After getting all the chars needed we'll bruteforce it!
+
+(See the python script)
+
+The password will be -> 8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw
