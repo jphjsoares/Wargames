@@ -1,0 +1,17 @@
+In natas17 we have a challenge similar to the SQLInjection challenges before. 
+Although, now we don't get any response from the website. This is another blind sql injection.
+
+Since we don't get any content reponse from the website we need to do a time-based sqli.
+This means that we'll check if a char exists just like we've done before. 
+If so, sleep for x seconds. And then we calculate if there was any delay or not.
+
+In order to do that, I used the exploit we've been using for the last challenges. 
+(See python script)
+
+In this challenge we used the following query:
+
+natas18" AND IF(password LIKE BINARY "'+password+char+'%", sleep(10), 1)#
+
+This query says, if the password por natas18 account has the characters given, then sleep for 10 seconds.
+
+The password for natas18 is xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP
