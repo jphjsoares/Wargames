@@ -1,0 +1,12 @@
+Natas18 presents us with a different challenge from the ones we've done before.
+As we read the source code given we can easily see that we'll have to do some kind of cookie exploitation.
+
+One thing that sticks out though, is that the max id is 640, and that's a really small number for cookies!
+
+So what we can do is change the cookie, one by one, to see which one belongs to the admin.
+
+For that, I made a little python script that will change the cookie on each request and stop when we find the admin one.
+(Check python script)
+
+
+The password for the next level will be -> 4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs 
