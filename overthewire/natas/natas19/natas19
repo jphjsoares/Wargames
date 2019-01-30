@@ -1,0 +1,19 @@
+In this challenge we have something really similar to natas18. But now, we are not presented the source code and we are given a message that session IDs are no longer sequential.
+
+By using burp and logging in with various usernames and password we can see that there are 2 chars that don't change '2d' this is the hex representation of '-'.
+
+And if we keep trying the same username we can see that those chars never change either, and that they are the hex representation of what we typed!
+
+What we'll be trying though is to use admin username since in this challenge they might have removed the comments from the other source code where we logged in as admin.
+
+Now our cookie will look like this '(gibberish)-admin' all in hex of course.
+
+But if we try to decode the (gibberish) in hex we can see that we are returned a number.
+
+So we can conclude that the whole cookie is actually encoded in hex! Even the number!
+
+Now, by assuming the max ids are still 640, let's just try our exploit that bruteforces our cookie...
+
+(see python code)
+
+Yes! The key for the next level is -> eofm3Wsshxc5bwtVnEuGIlr7ivb9KABF
