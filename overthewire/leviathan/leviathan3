@@ -1,0 +1,21 @@
+If we try to printfile /etc/leviathan_pass/leviathan3 with the binary that its given it will not work...
+
+Let's create a new tmp dir for us to test this file... "mkdir /tmp/sleety"
+
+Now let's create a new file just for the sake of testing it "touch lmao.txt"
+
+If we look at the strace again we can see that the program selects the whole argument as one.
+"/bin/cat %s", "hey_boy lmao.txt" (did "mv lmao.txt 'hey_boy lmao.txt'" before)
+
+So what we can try to assume that /bin/cat will read the 2 seperate files. And that does in fact happen!
+
+So if we let our creativity flow, we can create a link to the password, and that link would be "hey_boy"
+
+Let's run "ln -s /etc/leviathan_pass/leviathan3 /tmp/sleety/hey_boy"
+
+And now let's run "~/printfile 'hey_boy lmao.txt'" this will read "hey_boy" and "lmao.txt" being hey_boy the link!
+
+Success!!! 
+Password is -> Ahdiemoo1j
+
+
