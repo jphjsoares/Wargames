@@ -1,0 +1,6 @@
+natas3 -> This challenge is really similar to one we've done before.
+Using ltrace find the password that the code compares to and then you get a shell! 
+Then just type "cat /etc/leviathan_pass/leviathan4" and done! -> vuH0coox6m
+
+natas4 -> .trash wasn't here before... If we go to it and run bin we'll get binary numbers.
+Let's convert the binary to ascii and voila -> Tith4cokei
