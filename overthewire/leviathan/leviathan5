@@ -1,0 +1,7 @@
+All we got to do with what's given to us is create a symlink to the next levels pass and link it to the file the program looks for:
+
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+
+Now if we execute the program it will give us the password!
+
+UgaoFee4li
