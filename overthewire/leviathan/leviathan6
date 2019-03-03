@@ -1,0 +1,25 @@
+In this challenge we are presented with a program that asks for a 4 digit code.
+
+So what we can do is brute force this program. 
+
+Lets create a dir on /tmp by doing -> mkdir /tmp/sleety
+And a bash file -> nano bruteforce.sh
+
+Let's type the following script:
+
+----------------------
+#!/bin/bash
+
+for a in {0000..9999}
+do
+~/leviathan6 $a
+done
+---------------------
+
+Then after a while a shell will be spawned and now just type -> whoami
+Voila!
+
+-> cat /etc/leviathan_pass/leviathan7
+
+And the key will be: ahy7MaeBo9
+
