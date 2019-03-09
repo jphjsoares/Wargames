@@ -1,0 +1,14 @@
+In this level we are given a program that checks if there is a not empty evironment variable called EGG.
+If it exists it will retrieve a pointer to that env variable and stores it in ret. 
+And then it will execute anything EGG is pointing to as a function call.
+
+So what we can do is make a EGG variable equal to a shellcode.
+Let's go to shell-storm to find a shellcode that works. -> http://shell-storm.org/shellcode/files/shellcode-811.php
+(note: if we type "arch" it will give the architecture that you need to search for in order to find a shellcode)
+
+Now let's do -> export EGG=`python -c 'print ("\x31\xc0\x50\x68\x2f\x2f\x73" + "\x68\x68\x2f\x62\x69\x6e\x89" + "\xe3\x89\xc1\x89\xc2\xb0\x0b" + "\xcd\x80\x31\xc0\x40\xcd\x80")' `
+
+
+And we will get a shell!
+
+The password  will be: nairiepecu
